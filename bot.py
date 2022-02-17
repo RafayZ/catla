@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-import random
+import random, config
 
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
@@ -70,4 +70,4 @@ async def _bot(ctx):
 bot.load_extension("jishaku")
 
 
-bot.run('OTQzNjE3MzUwODk1MjgwMjQ4.Yg1qJA.KzPoybp_ltyiu4MXyOBdkfBe73c')
+bot.run(config.token)
