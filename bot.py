@@ -98,7 +98,14 @@ async def dcomp(ctx, name):
         'Shalltear' : ["For Sr,Ur max & rare 1000-1650: Prince, Nico/Hydra, Gasai/Zombieman (1-2 Ur)", "For rare 1650+: Yami, Nico/Hydra, Iris (1-3 Ur)"],
         'Senku' : ["For Sr,Ur max & rare 1000-1550: Violet/Riko, Jiraiya/Loke, Gasai/Wolf (0-1 Ur)", "For rare 1600+: Violet/Riko, Jiraiya/Loke, Gasai/Wolf (2-3 Ur)"],
         'Ritsu' : ["For Sr,Ur max & rare 1000-2200: Josuke, Ikumi, Ikumi (all Sr)", "For Sr max, rare 1550: Machi, Loke, Ikumi (all Sr)"],
-        'Motoyasu' : ["For Sr,Ur max & rare 1000-1900: Ranpo, Loke, Machi (0-1 Ur)", "For rare 2000+: Josuke, Ikumi, Ikumi (0-1 Ur"]
+        'Motoyasu' : ["For Sr,Ur max & rare 1000-1900: Ranpo, Loke, Machi (0-1 Ur)", "For rare 2000+: Josuke, Ikumi, Ikumi (0-1 Ur"],
+        'Elma' : ["For Sr,Ur max & rare 1000-1700: Motoyasu, Ranpo, Dio (0-1 Ur)", "For rare 1750+: Ranpo, Motoyasu, Dio (1-2 Ur)"],
+        'Gowther' : ["For Sr,Ur max & rare 1000-2200: Kenma, Shoto, Dio (all Sr) Or Nishinoya, Yukina/Iz, Ritsu (all Sr)", "For rare 2200+: Kenma, Shoto, Dio (0-1 Ur)"],
+        'Ikumi' : ["For Sr max & rare 1000-1300: Doppo, Koshi, Shion (all Sr)", "For Ur max & rare 1400+: Doppo, Koshi, Shion (1-2 Ur)", "For high crazy pl: Elaine, Riko/Violet, Iris/Ikumi"],
+        'Mito' : ["For Sr max & rare 1000-1300: Doppo, Koshi, Shion (all Sr)", "For Ur max & rare 1400+: Doppo, Koshi, Shion (1-2 Ur)", "For high crazy pl: Elaine, Riko/Violet, Iris/Ikumi"],
+        'Kurosaki' : ["For Sr,Ur max & rare 1500+: Izumo, Wiz/Mayuri/Izumi, Ban (1-2 Ur)", "For rare 1500 and below: Izumo, Wiz/Mayuri/Izumi, Ban (0-1 Ur)"],
+        'Escanor' : ["For Sr,Ur max & rare 1000-1600: Gowther, Padoru/Kenma/Wiz/Izumi, Fuyumi/Saika (all Sr)", "For rare 1650+: Gowther, Padoru/Kenma/Wiz/Izumi, Fuyumi/Saika (1-2 Ur)", "For crazy high pl: Maki, Gowther, Fuyumi (0-2 Ur)"],
+        'Dio' : ["For Sr,Ur max & rare 1000-1700: Senku, Jiraiya/Loke, Dio (all Sr)", "For rare 1750+: Senku, Jiraiya/Loke, Dio (1-2 Ur)", "For crazy high pl: Arde, Ikumi, Ikumi Or Ranpo, Hydra, Iris/Ikumi (3 Ur)"]
         }
     for key in comps:
         if key == name.title():
