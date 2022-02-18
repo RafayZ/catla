@@ -78,7 +78,7 @@ async def dcomp(ctx, name):
         'Nico' : ["For Sr,Ur max & rare 1000-2200: Izumo, Mukuro, Iris (2 UR)"],
         'Iz' : ["For Sr,Ur max & rare 1000-2200: Ranpo, Motoyasu, Dio (1 UR)"],
         'Machi' : ["For Sr,Ur max: Doppo, Koshi, Shion (all SR) or Josuke, Doppo, Shion (all Sr)", "For rare 1800-2200: Doppo, Koshi, Shion (1 UR)"],
-        'Sora' : ["For Sr,Ur max & rare 1000-2200: Kenma, Shoto, Fuyumi (all Sr"],
+        'Sora' : ["For Sr,Ur max & rare 1000-2200: Kenma, Shoto, Fuyumi (all Sr)"],
         'Hinawa' : ["For Sr,Ur max & rare 1000-1800: Shoto, Gowther, Fuyumi (all Sr)", "For rare 1800-2100: Jonathan, Iz, Elma (1 Ur)"],
         'Izumo' : ["For Sr,Ur max & rare 1000-1600: Rize, Doppo/Iz, Nezuko", "For rare 1600+: Nico, Shoto, Gasai (1 Ur min)"],
         'Shoto' : ["For Sr,Ur max & rare 1500-2200: Nishinoya, Iz/Yukina, Killua/Kenpachi (Ur Para is a must, 1-2 Ur)", "For rare 1000-1500: Ranpo, Motoyasu, Dio (1-2 Ur)"],
@@ -86,8 +86,8 @@ async def dcomp(ctx, name):
         }
     for key in comps:
         if key == name.title():
-            await ctx.send(comps[key])
-        await ctx.send('Please enter a valid name or DM my master if the card of your choice is not present.')
+            return await ctx.send(comps[key])
+    await ctx.send('Please enter a valid name or DM my master if the card of your choice is not present.')
 
 
 bot.load_extension("jishaku")
