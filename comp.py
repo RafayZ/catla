@@ -1,5 +1,5 @@
 #Dictionary for all the comps possible 
-def dcomp(name=str):
+def dcomp(name):
     print('Please note that high level rare comps can also be used backwards.')
     comps = {
         'Ranpo' : ["For Sr,Ur max & rare 1000-2200: Arde, Ikumi, Ikumi (all Sr) or Senku, Jiraiya/Loke, Dio/Gasai (all Sr)"],
@@ -13,7 +13,7 @@ def dcomp(name=str):
         'Star' : ["For Sr,Ur max & rare 1000-1600: Doppo, Koshi, Shion (1 Ur for Sr max, 2 Ur for above)", "For rare 1600+ Doppo, Koshi, Gin (2-3 Ur)"]
         }
     for key in comps:
-        if key == name:
+        if key == name.title():
             print(comps[key])
 
-dcomp('Hinawa')
+dcomp('hinawa')

@@ -71,7 +71,7 @@ async def _bot(ctx):
 
 
 @bot.command()
-async def dcomp(ctx, name=str):
+async def dcomp(ctx, name):
     await ctx.send('Please note that high level rare comps can also be used backwards.')
     comps = {
         'Ranpo' : ["For Sr,Ur max & rare 1000-2200: Arde, Ikumi, Ikumi (all Sr) or Senku, Jiraiya/Loke, Dio/Gasai (all Sr)"],
@@ -87,8 +87,7 @@ async def dcomp(ctx, name=str):
     for key in comps:
         if key == name.title():
             await ctx.send(comps[key])
-        else:
-            await ctx.send('Please enter a valid name or DM my master if the card of your choice is not present.')
+        await ctx.send('Please enter a valid name or DM my master if the card of your choice is not present.')
 
 
 bot.load_extension("jishaku")
