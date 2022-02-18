@@ -82,7 +82,23 @@ async def dcomp(ctx, name):
         'Hinawa' : ["For Sr,Ur max & rare 1000-1800: Shoto, Gowther, Fuyumi (all Sr)", "For rare 1800-2100: Jonathan, Iz, Elma (1 Ur)"],
         'Izumo' : ["For Sr,Ur max & rare 1000-1600: Rize, Doppo/Iz, Nezuko", "For rare 1600+: Nico, Shoto, Gasai (1 Ur min)"],
         'Shoto' : ["For Sr,Ur max & rare 1500-2200: Nishinoya, Iz/Yukina, Killua/Kenpachi (Ur Para is a must, 1-2 Ur)", "For rare 1000-1500: Ranpo, Motoyasu, Dio (1-2 Ur)"],
-        'Star' : ["For Sr,Ur max & rare 1000-1600: Doppo, Koshi, Shion (1 Ur for Sr max, 2 Ur for above)", "For rare 1600+ Doppo, Koshi, Gin (2-3 Ur)"]
+        'Star' : ["For Sr,Ur max & rare 1000-1600: Doppo, Koshi, Shion (1 Ur for Sr max, 2 Ur for above)", "For rare 1600+ Doppo, Koshi, Gin (2-3 Ur)"],
+        'Doppo' : ["For Sr,Ur max & rare 1000-2100: Sora/Kanade, Hinawa, Baji (all Sr)", "For rare 2200+: Sora/Kanade, Hinawa, Baji (1-2 Ur)"],
+        'Iris' : ["For Sr,Ur max & rare 1000-1500: Kenma/Hydra, Shoto, Gasai/Dio/Wolf (1 Ur)", "rare 1600+: Kenma/Hydra, Shoto, Gasai/Dio/Wolf (2 Ur)"],
+        'Loke' : ["For Sr,Ur max & rare 1000-1800: Doppo, Koshi, Shion Or Josuke, Doppo, Shion (all Sr)", "rare 1800+: Doppo, Koshi, Shion (1-2 Ur)"],
+        'Shion' : ["For Sr,Ur max & rare 1000-1600: Sora/Kanade, Hinawa, Baji (all Sr)", "For rare 1600+: Sora/Kanade, Hinawa, Baji (1-2 Ur)"],
+        'Yukina' : ["For Sr,Ur max & rare 1000-1700: Ranpo, Motoyasu, Dio (1 UR)", "For rare 1700+: Ranpo, Motoyasu, Dio (1-2 UR)"],
+        'Edward' : ["For Sr,Ur max & rare 1000-2000: Josuke, Doppo, Star (all Sr)", "For rare 2200+: Nico, Shoto, Tsukasa (1-2 Ur)"],
+        'Black Star' : ["For Sr,Ur max & rare 1000-1600: Doppo, Koshi, Shion (1 Ur for Sr max, 2 Ur for above)", "For rare 1600+ Doppo, Koshi, Gin (2-3 Ur)"],
+        'Bstar' : ["For Sr,Ur max & rare 1000-1600: Doppo, Koshi, Shion (1 Ur for Sr max, 2 Ur for above)", "For rare 1600+ Doppo, Koshi, Gin (2-3 Ur)"],
+        'Baji' : ["For Sr,Ur max & rare 1000-2000: Gowther, Kenma/Padoru, Fuyumi/Saika", "For rare 2000+: Gowther, Padoru/Kenma, Fuyumi/Saika (1-2 Ur)"],
+        'Anna' : ["For Sr,Ur max & rare 1000-1600: Ririka, Artoria, Byakuya or Ranpo/Gowther, Motoyasu, Dio/Wolf/Byakuya (1 Ur recommended on Gowther comp)", "For rare 1600+:Ririka, Artoria, Kirari (2-3 Ur)"],
+        'Gasai' : ["For Sr,Ur max & rare 1000-2200: Izumo, Nico, Gasai (1-2 Ur)", "For rare 1550 and below: Izumo, Motoyasu, Gasai/Dio/Wolf(0-1 Ur)"],
+        'Yami' : ["For Sr,Ur max and rare 1500+: Izumo, Naraku/Maria, Ban (1-2 Ur)", "For rare 1500 and below: Rize, Wiz/Mayuri/Izumi, Iris (0-1 Ur)"],
+        'Shalltear' : ["For Sr,Ur max & rare 1000-1650: Prince, Nico/Hydra, Gasai/Zombieman (1-2 Ur)", "For rare 1650+: Yami, Nico/Hydra, Iris (1-3 Ur)"],
+        'Senku' : ["For Sr,Ur max & rare 1000-1550: Violet/Riko, Jiraiya/Loke, Gasai/Wolf (0-1 Ur)", "For rare 1600+: Violet/Riko, Jiraiya/Loke, Gasai/Wolf (2-3 Ur)"],
+        'Ritsu' : ["For Sr,Ur max & rare 1000-2200: Josuke, Ikumi, Ikumi (all Sr)", "For Sr max, rare 1550: Machi, Loke, Ikumi (all Sr)"],
+        'Motoyasu' : ["For Sr,Ur max & rare 1000-1900: Ranpo, Loke, Machi (0-1 Ur)", "For rare 2000+: Josuke, Ikumi, Ikumi (0-1 Ur"]
         }
     for key in comps:
         if key == name.title():
