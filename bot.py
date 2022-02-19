@@ -122,7 +122,7 @@ async def blacklist(ctx):
     else:
         return
 
-@bot.command()
+@bot.listen()
 async def aniblacklist(message):
     blist = [380822909813391360]
     for id in blist:
