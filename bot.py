@@ -105,13 +105,22 @@ async def dcomp(ctx, name):
         'Mito' : ["For Sr max & rare 1000-1300: Doppo, Koshi, Shion (all Sr)", "For Ur max & rare 1400+: Doppo, Koshi, Shion (1-2 Ur)", "For high crazy pl: Elaine, Riko/Violet, Iris/Ikumi"],
         'Kurosaki' : ["For Sr,Ur max & rare 1500+: Izumo, Wiz/Mayuri/Izumi, Ban (1-2 Ur)", "For rare 1500 and below: Izumo, Wiz/Mayuri/Izumi, Ban (0-1 Ur)"],
         'Escanor' : ["For Sr,Ur max & rare 1000-1600: Gowther, Padoru/Kenma/Wiz/Izumi, Fuyumi/Saika (all Sr)", "For rare 1650+: Gowther, Padoru/Kenma/Wiz/Izumi, Fuyumi/Saika (1-2 Ur)", "For crazy high pl: Maki, Gowther, Fuyumi (0-2 Ur)"],
-        'Dio' : ["For Sr,Ur max & rare 1000-1700: Senku, Jiraiya/Loke, Dio (all Sr)", "For rare 1750+: Senku, Jiraiya/Loke, Dio (1-2 Ur)", "For crazy high pl: Arde, Ikumi, Ikumi Or Ranpo, Hydra, Iris/Ikumi (3 Ur)"]
+        'Dio' : ["For Sr,Ur max & rare 1000-1700: Senku, Jiraiya/Loke, Dio (all Sr)", "For rare 1750+: Senku, Jiraiya/Loke, Dio (1-2 Ur)", "For crazy high pl: Arde, Ikumi, Ikumi Or Ranpo, Hydra, Iris/Ikumi (3 Ur)"],
+        'Byakuya' : ["For Sr,Ur max & rare 1000-1800: Kenma, Shoto, Dio/Wolf/Byakuya (all Sr)", "For rare 1800+: Kenma, Shoto, Dio/Wolf/Byakuya (1-2 Ur)"]
         }
     for key in comps:
         if key == name.title():
             return await ctx.send(comps[key])
     await ctx.send('Please enter a valid name or DM my master if the card of your choice is not present.')
 
+@bot.command()
+async def blacklist(ctx):
+    blacklist = []
+    await ctx.message.delete()
+    if ctx.author.id in blacklist:
+        await ctx.send("You are blacklisted")
+    else:
+        return
 
 bot.load_extension("jishaku")
 
