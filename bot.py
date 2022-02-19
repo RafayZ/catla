@@ -122,6 +122,13 @@ async def blacklist(ctx):
     else:
         return
 
+@bot.command()
+async def aniblacklist(message):
+    blist = [380822909813391360]
+    for id in blist:
+        if message.embeds.content == str(id):
+            await message.channel.send(f'{id} is blacklisted!!')
+
 bot.load_extension("jishaku")
 
 
