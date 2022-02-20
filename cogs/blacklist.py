@@ -1,3 +1,4 @@
+import discord
 from discord.ext import commands
 import re
 class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
@@ -34,4 +35,4 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
         await ctx.send("Blacklisted!")
 
 def setup(bot):
-    bot.add_cog(AniBlacklist(bot))
+    bot.add_cog(AniBlacklist(bot)) 
