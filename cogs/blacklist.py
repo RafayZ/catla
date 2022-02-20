@@ -9,7 +9,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        if msg.author.id != 571027211407196161:
+        if message.author.id != 571027211407196161:
             return 
         if not message.embeds:
             return
