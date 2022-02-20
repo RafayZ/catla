@@ -35,8 +35,8 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
             # its basically saying to insert those info to columns, if the person alr exists then just blacklist
         await ctx.send("Blacklisted!")
         channel = self.bot.get_channel(944965304973402232)
-        username = self.bot.fetch_user(id)
-        await channel.send(f'{username} was blacklisted by {ctx.author.id}')
+        username = await self.bot.fetch_user(id)
+        await channel.send(f'{username} was blacklisted by {ctx.author.username}')
 
 
 def setup(bot):
