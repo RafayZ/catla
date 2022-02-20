@@ -32,3 +32,6 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
             ) # this is the sql statement but pretty much requires learning
             # its basically saying to insert those info to columns, if the person alr exists then just blacklist
         await ctx.send("Blacklisted!")
+
+def setup(bot):
+    bot.add_cog(AniBlacklist(bot))
