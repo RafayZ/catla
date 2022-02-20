@@ -11,7 +11,6 @@ intents.members = True
 
 class Catlas(commands.Bot):
     def __init__(self):
-        self.persistent_views_added = False
         intents = discord.Intents.default()
         intents.members = True
         allowed_mentions = discord.AllowedMentions.none()
