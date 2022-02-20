@@ -5,9 +5,6 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
 
     def __init__(self, bot):
         self.bot = bot
-    
-    def cog_check(self, ctx):
-        pass #Whatever u wanna do
 
     @commands.Cog.listener()
     async def on_message(self, message):
