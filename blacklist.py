@@ -3,7 +3,7 @@ import re
 class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
     """Get blacklisted idiots"""
 
-    def __init__iself, bot):
+    def __init__(self, bot):
         self.bot = bot
     
     def cog_check(self, bot):
