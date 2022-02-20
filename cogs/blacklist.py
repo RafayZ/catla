@@ -22,7 +22,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
                     message.channel.send(f'{user} is blacklisted!')
     
     @commands.is_owner()
-    @commands.Command()
+    @commands.command()
     async def addbl(self, ctx, id: int, *, reason:str):
         """Blacklist someone haha"""
         await self.bot.pool.execute("""INSERT INTO blacklist (uid, blacklisted, blreason) VALUES ($1, True, $2)
