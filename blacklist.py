@@ -1,4 +1,4 @@
-new cog who dis
+from discord import commands
 class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
     """Get blacklisted idiots"""
 
