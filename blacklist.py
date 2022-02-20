@@ -1,4 +1,4 @@
-from discord import commands
+from discord.ext import commands
 import re
 class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
     """Get blacklisted idiots"""

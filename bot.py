@@ -1,6 +1,6 @@
 import discord, asyncio, aiohttp
 from discord.ext import commands
-import random, config, db, os
+import random, config, db, os, asyncpg
 
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
