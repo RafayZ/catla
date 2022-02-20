@@ -1,6 +1,6 @@
-import discord
+import discord, asyncio, aiohttp
 from discord.ext import commands
-import random, config
+import random, config, db
 
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
@@ -9,20 +9,33 @@ There are a number of utility commands being showcased here.'''
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix='&', description=description, intents=intents)
+class Catlas(commands.Bot):
+    def __init__(self):
+        self.persistent_views_added = False
+        intents = discord.Intents.default()
+        intents.members = True
+        allowed_mentions = discord.AllowedMentions.none()
+        allowed_mentions.users = True
+        super().__init__(command_prefix='&',
+        max_messages=1000,
+        intents=intents,
+        allowed_mentions=allowed_mentions)
+        
+    async def on_ready(self):
+        print(f"Logged in as {self.user} (ID: {self.user.id})")
 
-@bot.event
-async def on_ready():
-    print(f'Logged in as {bot.user} (ID: {bot.user.id})')
-    print('------')
+    def run(self, *args, **kwargs):
+        loop = asyncio.get_event_loop()
+        self.pool = loop.run_until_complete(db.Table.create_pool(config.postgresql))
+        self.session = aiohttp.ClientSession()
+        self.config = config
+        super().run(*args, **kwargs)
 
-def run(self, *args, **kwargs):
-    loop = asynchio.get_event_loop()
-    self.pool = loop.run_until_complete(db.Table.create_pool(postgresq1))
-    self.session = aiohttp.ClientSession()
-    self.config = config
-    super().run(*args, **kwargs)
+    async def close(self):
+        await self.session.close()
+        await super().close()
 
+bot = Catlas()
 
 @bot.command()
 async def add(ctx, left: int, right: int):
