@@ -25,7 +25,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
     @commands.command()
     async def addbl(self, ctx, id: int, *, reason:str):
         """Blacklist someone haha"""
-        await self.bot.pool.execute("""INSERT INTO blacklist (uid, blacklisted, blreason) VALUES ($1, True, $2)
+        await self.bot.pool.execute("""INSERT INTO blacklist (uid, blacklisted, reason) VALUES ($1, True, $2)
                 ON CONFLICT (uid) DO UPDATE SET blacklisted = True, reason = $2;
                 """,
                 id,
