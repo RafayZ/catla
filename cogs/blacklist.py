@@ -22,7 +22,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
                     username = await self.bot.fetch_user(user)
                     await message.channel.send(f'{username.name}#{username.discriminator} is blacklisted! Reason: {blcheck["reason"]}')
     
-    @commands.is_owner()
+    @commands.has_role('Blacklist')
     @commands.command()
     async def addbl(self, ctx, id: int, *, reason:str):
         """Blacklist someone haha"""
@@ -34,6 +34,9 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
             ) # this is the sql statement but pretty much requires learning
             # its basically saying to insert those info to columns, if the person alr exists then just blacklist
         await ctx.send("Blacklisted!")
+        channel = bot.get_channel(944965612080345119)
+        await channel.send()
+
 
 def setup(bot):
     bot.add_cog(AniBlacklist(bot)) 
