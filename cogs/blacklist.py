@@ -19,7 +19,8 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
             for user in users: #check them individually
                 blcheck = await self.bot.pool.fetchrow("""SELECT * FROM blacklist WHERE "uid"=$1 and blacklisted;""", int(user))
                 if blcheck:
-                   await message.channel.send(f'{user} is blacklisted!')
+                    username = await bot.fetch_user(user)
+                    await message.channel.send(f'{username.name} is blacklisted!')
     
     @commands.is_owner()
     @commands.command()
