@@ -1,4 +1,5 @@
 from discord import commands
+import re
 class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
     """Get blacklisted idiots"""
 
@@ -14,13 +15,20 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
             return 
         if not message.embeds:
             return
+        embed = message.embeds[0]
+        if embed.footer.text.endswith("Type .rd start whenever the party is ready!"):
+            users = re.findall(r'\(([0-9]{15,19})\)', str(embed.to_dict())) #get all the ids in lobby
+            for user in users: #check them individually
+                blcheck = await self.bot.pool.fetchrow("""SELECT * FROM blacklist WHERE "uid"=$1 and blacklisted;""", int(user))
+                if blcheck:
+                    message.channel.send(f'{user} is blacklisted!')
     
     @commands.is_owner()
     @commands.Command()
     async def addbl(self, ctx, id: int, *, reason:str):
         """Blacklist someone haha"""
         await self.bot.pool.execute("""INSERT INTO blacklist (uid, blacklisted, blreason) VALUES ($1, True, $2)
-                ON CONFLICT (uid) DO UPDATE SET blacklisted = True, blreason = $2;
+                ON CONFLICT (uid) DO UPDATE SET blacklisted = True, reason = $2;
                 """,
                 id,
                 reason,

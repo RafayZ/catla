@@ -144,6 +144,6 @@ async def blacklist(ctx):
         return
 
 bot.load_extension("jishaku")
-
+bot.load_extension('blacklist')
 
 bot.run(config.token)
