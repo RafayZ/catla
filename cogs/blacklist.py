@@ -36,7 +36,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
         await ctx.send("Blacklisted!")
         channel = self.bot.get_channel(944965304973402232)
         username = await self.bot.fetch_user(id)
-        await channel.send(f'{username} was blacklisted by {ctx.author.username}')
+        await channel.send(f'{username} was blacklisted by {ctx.author.name}')
 
 
 def setup(bot):
