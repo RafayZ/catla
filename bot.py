@@ -16,6 +16,14 @@ async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
     print('------')
 
+def run(self, *args, **kwargs):
+    loop = asynchio.get_event_loop()
+    self.pool = loop.run_until_complete(db.Table.create_pool(postgresq1))
+    self.session = aiohttp.ClientSession()
+    self.config = config
+    super().run(*args, **kwargs)
+
+
 @bot.command()
 async def add(ctx, left: int, right: int):
     """Adds two numbers together."""
