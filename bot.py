@@ -35,6 +35,7 @@ class Catlas(commands.Bot):
         await super().close()
 
 bot = Catlas()
+os.environ['JISHAKU_NO_UNDERSCORE'] = 'True'
 
 @bot.command()
 async def add(ctx, left: int, right: int):
