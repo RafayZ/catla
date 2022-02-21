@@ -93,6 +93,7 @@ async def _bot(ctx):
 
 @bot.command()
 async def dcomp(ctx, name):
+    """Command to check different comps for raids in the Anigame bot"""
     await ctx.send('Please note that high level rare comps can also be used backwards.')
     comps = {
         'Ranpo' : ["For Sr,Ur max & rare 1000-2200: Arde, Ikumi, Ikumi (all Sr) or Senku, Jiraiya/Loke, Dio/Gasai (all Sr)"],
@@ -136,6 +137,7 @@ async def dcomp(ctx, name):
 
 @bot.command()
 async def blacklist(ctx):
+    """A command to blacklist user's from using this bot."""
     blacklist = []
     await ctx.message.delete()
     if ctx.author.id in blacklist:
