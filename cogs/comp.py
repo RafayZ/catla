@@ -19,8 +19,10 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
           ('ranpo', 'For Sr/Ur Max & rare 1000-2200: Arde Ikumi Ikumi (all SR) or Senku Jiraiya/Loke Dio/Gasai (all SR)'),
           ('nico', 'For Sr/Ur Max & rare 1000-2200: Izumo Mukuro Iris (2 UR)');''')
         namess = await self.bot.pool.fetchrow(""" SELECT * FROM comps WHERE names = $1;""", name )
-        return await ctx.send(f'{namess["comp"]}')
-        await ctx.send("Please enter a valid name or DM my master if the card of your choice is not present.")
+        if name in namess:
+            return await ctx.send(f'{namess["comp"]}')
+        else:
+            await ctx.send("Please enter a valid name or DM my master if the card of your choice is not present.")
 
 def setup(bot):
     bot.add_cog(Anicomp(bot))
