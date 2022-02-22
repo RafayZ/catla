@@ -18,7 +18,7 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
         VALUES
           ('Ranpo', 'For Sr/Ur Max & rare 1000-2200: Arde Ikumi Ikumi (all SR) or Senku Jiraiya/Loke Dio/Gasai (all SR)'),
           ('Nico', 'For Sr/Ur Max & rare 1000-2200: Izumo Mukuro Iris (2 UR)');''')
-        namess = self.bot.pool.fetchrow(""" SELECT * FROM comps WHERE names = name;""" )
+        namess = await self.bot.pool.fetchrow(""" SELECT * FROM comps WHERE names = name;""" )
         return await ctx.send(namess)
         await ctx.send("Please enter a valid name or DM my master if the card of your choice is not present.")
 
