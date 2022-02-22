@@ -45,7 +45,7 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
           ('escanor', 'For Sr/Ur max & rare 1000-1600: Gowther Padoru/Kenma/Wiz/Izumi Fuyumi/Saika (all Sr). For rare 1650+: Gowther Padoru/Kenma/Wiz/Izumi Fuyumi/Saika (1-2 Ur). For crazy high pl: Maki Gowther Fuyumi (0-2 Ur)'),
           ('dio', 'For Sr/Ur max & rare 1000-1700: Senku Jiraiya/Loke Dio (all Sr). For rare 1750+: Senku Jiraiya/Loke Dio (1-2 Ur). For crazy high pl: Arde Ikumi Ikumi Or Ranpo Hydra Iris/Ikumi (3 Ur)'),
           ('byakuya', 'For Sr/Ur max & rare 1000-1800: Kenma Shoto Dio/Wolf/Byakuya (all Sr). For rare 1800+: Kenma Shoto Dio/Wolf/Byakuya (1-2 Ur)')
-          ('artoria', 'For Sr/Ur max & rare 1000-1550: Sayaka Kurapika Kirari/Iris(3 Ur) For rare 1550+: Ririka Kurapika Kirari/Iris(3 Ur)');''')
+          ('artoria', 'For Sr/Ur max & rare 1000-1550: Sayaka Kurapika Kirari/Iris (3 Ur). For rare 1550+: Ririka Kurapika Kirari/Iris (3 Ur)');''')
         namess = await self.bot.pool.fetchrow(""" SELECT * FROM comps WHERE names = $1;""", name )
         if namess:
             await ctx.send("Please note that high level rare comps can also be used on SR,UR raids.")
