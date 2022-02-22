@@ -92,7 +92,7 @@ async def _bot(ctx):
 
 
 #@bot.command()
-async def dcomp(ctx, name):
+#async def dcomp(ctx, name):
     """Command to check different comps for raids in the Anigame bot"""
     await ctx.send('Please note that high level rare comps can also be used backwards.')
     comps = {
