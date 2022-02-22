@@ -8,7 +8,7 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
         self.bot = bot
 
     @commands.command()
-    async def dcomp(ctx, name):
+    async def dcomp(self, ctx, name):
         await ctx.send("Please note that high level rare comps can also be used on SR,UR raids.")
         comp_table = '''CREATE TABLE comps(
             names TEXT,
