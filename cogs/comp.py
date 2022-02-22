@@ -16,8 +16,8 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
         );'''
         await self.bot.pool.execute('''INSERT INTO comps (names, comp)
         VALUES
-          (Ranpo, For Sr,Ur max & rare 1000-2200: Arde, Ikumi, Ikumi (all Sr) or Senku, Jiraiya/Loke, Dio/Gasai (all Sr)),
-          (Nico, For Sr,Ur max & rare 1000-2200: Izumo, Mukuro, Iris (2 UR));''')
+          (Ranpo, For Sr/Ur max & rare 1000-2200: Arde Ikumi Ikumi (all Sr) or Senku Jiraiya/Loke Dio/Gasai (all Sr)),
+          (Nico, For SrUr max & rare 1000-2200: Izumo Mukuro Iris (2 UR));''')
         namess = self.bot.pool.fetchrow(""" SELECT * FROM comps WHERE names = name;""" )
         return await ctx.send(namess)
         await ctx.send("Please enter a valid name or DM my master if the card of your choice is not present.")
