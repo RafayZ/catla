@@ -70,7 +70,7 @@ async def Karuta(message):
     if message.guild.id != 921640800255901737:
         return
     if message.content == "I'm dropping 3 cards since this server is currently active!":
-      await message.channel.send("<@&943782735179309096>, server drop guys!")
+      await message.channel.send("<@&945698593971535962>, server drop guys!")
 
 @bot.command()
 async def joined(ctx, member: discord.Member):
