@@ -65,12 +65,12 @@ async def repeat(ctx, times: int, content='repeating...'):
     for i in range(times):
         await ctx.send(content)
 
-@bot.listen('on_message')
-async def Karuta(message):
-    if message.guild.id != 921640800255901737:
-        return
-    if message.content == "I'm dropping 3 cards since this server is currently active!":
-      await message.channel.send("<@&943782735179309096>, server drop guys!")
+#@bot.listen('on_message')
+#async def Karuta(message):
+#    if message.guild.id != 921640800255901737:
+#        return
+#    if message.content == "I'm dropping 3 cards since this server is currently active!":
+#      await message.channel.send("<@&943782735179309096>, server drop guys!")
 
 @bot.command()
 async def joined(ctx, member: discord.Member):

@@ -20,7 +20,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
                 blcheck = await self.bot.pool.fetchrow("""SELECT * FROM blacklist WHERE "uid"=$1 and blacklisted;""", int(user))
                 if blcheck:
                     username = await self.bot.fetch_user(user)
-                    await message.channel.send(f'{username.name}#{username.discriminator} is blacklisted! Reason: {blcheck["reason"]}')
+                    await message.channel.send(f'⚠️ {username.name}#{username.discriminator} is blacklisted! Reason: {blcheck["reason"]} ⚠️')
     
     @commands.has_role('Blacklist')
     @commands.command()
