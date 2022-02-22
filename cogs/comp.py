@@ -17,7 +17,7 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
         await self.bot.pool.execute('''INSERT INTO comps (name, comp)
         VALUES
           (Ranpo, For Sr,Ur max & rare 1000-2200: Arde, Ikumi, Ikumi (all Sr) or Senku, Jiraiya/Loke, Dio/Gasai (all Sr)),
-          (Nico, For Sr,Ur max & rare 1000-2200: Izumo, Mukuro, Iris (2 UR))''')
+          (Nico, For Sr,Ur max & rare 1000-2200: Izumo, Mukuro, Iris (2 UR));''')
         for names in comps:
             if names == name.title():
                 return await ctx.send(comp(names))
