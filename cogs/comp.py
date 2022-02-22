@@ -18,7 +18,7 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
           ('ranpo', 'For Sr/Ur Max & rare 1000-2200: Arde Ikumi Ikumi (all SR) or Senku Jiraiya/Loke Dio/Gasai (all SR)'),
           ('nico', 'For Sr/Ur Max & rare 1000-2200: Izumo Mukuro Iris (2 UR)');''')
         namess = await self.bot.pool.fetchrow(""" SELECT * FROM comps WHERE names = $1;""", name )
-        if name in names:
+        if names:
             await ctx.send("Please note that high level rare comps can also be used on SR,UR raids.")
             return await ctx.send(f'{namess["comp"]}')
         else:
