@@ -20,3 +20,6 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
           (Nico, For Sr,Ur max & rare 1000-2200: Izumo, Mukuro, Iris (2 UR)),
           ''')
 
+def setup(bot):
+    bot.add_cog(Anicomp(bot))
+    
