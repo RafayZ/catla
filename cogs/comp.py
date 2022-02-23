@@ -18,3 +18,6 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
 
 def setup(bot):
     bot.add_cog(Anicomp(bot))
+
+#&jsk py await bot.pool.execute('''INSERT INTO comps (names, comp)
+        #VALUES
