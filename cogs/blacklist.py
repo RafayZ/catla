@@ -41,7 +41,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
     @commands.command()
     async def delbl(self, ctx, user_id: int):
         """Remove from blacklist :p"""
-        await self.bot.pool.execute('''delete from blacklist where uid = 1$;''', user_id
+        await self.bot.pool.execute('''delete from blacklist where uid = blacklist.uid;''', user_id
     )
         username = await self.bot.fetch_user(user_id)
         await ctx.send(f"Removed {username} from Blacklist!")
