@@ -39,11 +39,11 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
         await channel.send(f'{username} was blacklisted by {ctx.author.name}')
 
     @commands.command()
-    async def delbl(self, ctx, id: int):
+    async def delbl(self, ctx, user_id: int):
         """Remove from blacklist :p"""
-        await self.bot.pool.execute('''delete from blacklist where uid = id;'''
+        await self.bot.pool.execute('''delete from blacklist where uid = user_id;''', user_id
     )
-        username = await self.bot.fetch_user(id)
+        username = await self.bot.fetch_user(user_id)
         await ctx.send(f"Removed {username} from Blacklist!")
 
 def setup(bot):
