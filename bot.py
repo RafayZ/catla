@@ -90,6 +90,7 @@ async def _bot(ctx):
     """Is the bot cool?"""
     await ctx.send('Yes, the bot is cool!')
 
+@commands.has_role('Blacklist')
 @bot.command()
 async def blacklist(ctx):
     """A command to blacklist user's from using this bot."""

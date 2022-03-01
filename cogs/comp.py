@@ -9,6 +9,7 @@ class Anicomp(commands.Cog, name = "Anigame Comps"):
 
     @commands.command()
     async def dcomp(self, ctx, name):
+        '''To figure out comps for Anigame bot'''
         namess = await self.bot.pool.fetchrow(""" SELECT * FROM comps WHERE names = $1;""", name )
         if namess:
             await ctx.send("Please note that high level rare comps can also be used on SR,UR raids.")
