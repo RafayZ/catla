@@ -22,7 +22,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
                     username = await self.bot.fetch_user(user)
                     await message.channel.send(f'⚠️ {username.name}#{username.discriminator} is blacklisted! Reason: {blcheck["reason"]} ⚠️')
     
-    @commands.has_role('Blacklist')
+    #@commands.has_role('Blacklist')
     @commands.command()
     async def addbl(self, ctx, id: int, *, reason:str):
         """Blacklist someone haha"""
@@ -38,7 +38,7 @@ class AniBlacklist(commands.Cog, name='Anigame Blacklist'):
         username = await self.bot.fetch_user(id)
         await channel.send(f'{username} was blacklisted by {ctx.author.name}')
 
-    @commands.has_role('Blacklist')
+    #@commands.has_role('Blacklist')
     @commands.command()
     async def delbl(self, ctx, id: int):
         """Remove from blacklist :p"""
